@@ -7,8 +7,16 @@ const resolvers = {
   Review: {
     location: (locationId) => {
       return { id: locationId}
-      
+
       // TODO
+    },
+  },
+  Location: {
+    overallRating: ({ id }, _, { dataSources }) => {
+      return dataSources.reviewsAPI.getOverallRatingForLocation(id);
+    },
+    reviewsForLocation: ({ id }, _, { dataSources }) => {
+      return dataSources.reviewsAPI.getReviewsForLocation(id);0
     },
   },
   
