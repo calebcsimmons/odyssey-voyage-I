@@ -4,6 +4,14 @@ const resolvers = {
       return dataSources.reviewsAPI.getLatestReviews();
     }
   },
+  Review: {
+    location: (locationId) => {
+      return { id: locationId}
+      
+      // TODO
+    },
+  },
+  
   Mutation: {
     submitReview: (_, {locationReview}, {dataSources}) => {
       const newReview = dataSources.reviewsAPI.submitReviewForLocation(locationReview);
