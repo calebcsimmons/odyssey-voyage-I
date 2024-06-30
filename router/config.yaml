@@ -1,0 +1,7 @@
+supergraph:
+  # The socket address and port to listen on
+  listen: 127.0.0.1:3001
+cors:
+  origins:
+    - http://localhost:3000 # Allows any locally-running client to run against your Router
+    - https://studio.apollographql.com # Allows Apollo Studio to still run queries against your Router
