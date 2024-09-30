@@ -11,7 +11,7 @@ type Query {
 
 type Location @key(fields: "id") {
   id: ID!
-  "The name of the location"
+  "The name of the location!"
   name: String!
   "A short description about the location"
   description: String!
